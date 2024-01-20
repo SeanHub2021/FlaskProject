@@ -1,4 +1,5 @@
 import os
+import json
 from flask import Flask, render_template 
 ##capital F on Flask indicates is a class name, import the Flask cask
 ##import render_template from the Framework
@@ -15,16 +16,19 @@ def index(): ##create function Index
 
 @app.route("/about")##this view we name "/about" also then becoems a URL
 def about(): ##bind that to a view we will also call "about"
-    return render_template("about.html")
+    data =[] ##initialise an empty array/list
+    with open("data/company.json", "r") as json_data: ##python is opening the json file as 'r'ead only and assigning the contents of the file to a new variable, json_data
+        data = json.load(json_data) ##we need to set our empty data list to equal the parsed json data we've sent through
+    return render_template("about.html", page_title="About", company=data) ##create new variable company, and pass the 'data' we just created, after the function is ran.
 
 
 @app.route("/contact")
 def contact(): 
-    return render_template("contact.html")
+    return render_template("contact.html", page_title="Contact")
 
 @app.route("/careers")
 def careers():
-    return render_template("careers.html")
+    return render_template("careers.html", page_title="Careers")
 
 if __name__ == "__main__":
     app.run(

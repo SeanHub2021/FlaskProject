@@ -1,4 +1,37 @@
 {% extends "base.html" %}
 {% block content %}
-    <h1>About Page</h1>
+    <!-- {% for number in list_of_numbers %}
+        <p>{{ number }}</p>
+    {% endfor %} -->
+            
+    <h2>{{ page_title }}</h2>
+    <p>
+        In the heart of a bustling metropolis, where fashion and entrepreneurship intertwine, the legendary company "Short
+        Kings - Short Men Who Are Large and In Charge" was born. Founded by a dynamic group of short men who defied the
+        conventional standards of succ ess, these trailblazers redefined what it means to be powerful and influential in a
+        world obsessed with height. With an unyielding spirit and an eye for style, they carved out a niche in the business
+        world, where swagger, fashion, and wealth speak louder than words. Each founder, a maverick in his own right,
+        brought not just business acumen but an unrivaled sense of style, earning them the moniker 'The Swag Maestros'. From
+        their impeccably tailored suits to their striking accessories, every aspect of their appearance was a statement of
+        their lavish lifestyle and entrepreneurial prowess. The company rapidly became a beacon for aspiring entrepreneurs
+        and fashion icons, proving that true kings aren't measured by their height, but by the magnitude of their ambition
+        and the boldness of their style.
+    </p>
+
+    {% for member in company %}
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h3>{{ member.name }}</h3>
+                <p>{{ member.description }}</p>
+            </div>
+            <div class="col-md-5">
+                <img src="{{ member.image_source }}" alt="{{ member.name }}" class="featurette-image image-responsive">
+            </div>        
+        </div>
+
+        <hr class="featurette-divider">
+
+    {% endfor %}
+
 {% endblock %}
