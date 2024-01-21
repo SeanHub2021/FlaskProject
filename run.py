@@ -1,12 +1,14 @@
 import os
 import json
-from flask import Flask, render_template 
+from flask import Flask, render_template, request, flash
+if os.path.exists("env.py"):
+    import env
 ##capital F on Flask indicates is a class name, import the Flask cask
 ##import render_template from the Framework
 
 
 app = Flask(__name__) ##create an instance of Flask and store it in a variable named app. Name of the package, __name__ is a built-in Python variable. Flask needs this to know where to look for templates and files. 
-
+app.secret_key = os.environ.get("SECRET_KEY")
 
 @app.route("/") ##a decorator starts with the @ symbol, its a way of wrapping functions. When we try to browse the root directory, by "/", it triggers the function
 def index(): ##create function Index
@@ -22,8 +24,22 @@ def about(): ##bind that to a view we will also call "about"
     return render_template("about.html", page_title="About", company=data) ##create new variable company, and pass the 'data' we just created, after the function is ran.
 
 
-@app.route("/contact")
-def contact(): 
+@app.route("/about/<member_name>")
+def about_member(member_name):
+    member = {}
+    with open("data/company.json", "r") as json_data:
+        data = json.load(json_data)
+        for obj in data:
+            if obj["url"] == member_name:
+                member = obj
+    return render_template("member.html", member=member)
+
+
+@app.route("/contact", methods=["GET", "POST"])
+def contact():
+    if request.method == "POST":
+        flash("Thanks {}, we have received your message!".format(
+            request.form.get("name")))
     return render_template("contact.html", page_title="Contact")
 
 @app.route("/careers")

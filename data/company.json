@@ -2,36 +2,43 @@
     {
         "name": "Maximus Goldbeard",
         "description": "Maximus Goldbeard, the founder of 'Goldbeard Gourmet', revolutionized the culinary world with his chain of luxury rooftop restaurants. Known for his Midas touch in business, everything he caters turns to culinary gold. His signature dish, 'The Golden Delight', is as opulent as his beard and is rumored to have actual gold flakes.",
-        "image_source": "/static/img/Maximus Goldbeard profile.webp"
+        "image_source": "/static/img/Maximus Goldbeard profile.webp",
+        "url": "goldbeard"
     },
     {
         "name": "Sir Jasper Diamondcloak",
         "description": "Sir Jasper, the mastermind behind 'Diamondcloak Design', a high-end fashion brand, dazzled the fashion industry with his diamond-studded cloaks. His rise to fame came after his cloak caught the light at a major fashion show, temporarily blinding the front row, making headlines as the most 'illuminating' moment in fashion history.",
-        "image_source": "/static/img/sir jasper diamondcloak.webp"
+        "image_source": "/static/img/sir jasper diamondcloak.webp",
+        "url": "diamondcloak"
     },
     {
         "name": "Baron Rubyaxe",
         "description": "As the CEO of 'Rubyaxe Records', Baron Rubyaxe became a legend in the music industry. His record label, known for its cutting-edge artists and ruby-studded record awards, dominates the charts. He's famous for hosting extravagant parties where the invitations are small ruby axes, now a collector's item",
-        "image_source": "/static/img/baron rubyaxe.webp"
+        "image_source": "/static/img/baron rubyaxe.webp",
+        "url": "rubyaxe"
     },
     {
         "name": "Duke Emeraldstout",
         "description": "Duke Emeraldstout, the green-thumbed genius, founded 'Emeraldstout Botanicals', a line of luxury organic skincare products infused with emerald dust. His groundbreaking product, 'Emerald Elixir', promises eternal youth and has become a must-have in every high-society vanity.",
-        "image_source": "/static/img/Duke Emeraldstout.webp"
+        "image_source": "/static/img/Duke Emeraldstout.webp",
+        "url": "emeraldstout"
     },
     {
         "name": "Lord Sapphirebraid",
         "description": "Lord Sapphirebraid, a tech wizard, created 'Sapphirebraid Solutions', a software empire known for its unbreakable security systems. His most famous creation, 'The Sapphire Shield', is used by governments worldwide, rumored to be as indestructible as the sapphires in his beard.",
-        "image_source": "/static/img/Lord Sapphirebraid.webp"
+        "image_source": "/static/img/Lord Sapphirebraid.webp",
+        "url": "sapphirebraid"
     },
     {
         "name": "Count Velvetbeard",
         "description": "Count Velvetbeard's 'Velvetbeard Ventures' is a venture capitalist firm with a knack for turning fledgling startups into fashion empires. His smooth approach in business negotiations is as legendary as his velvet-trimmed suits, earning him the nickname 'The Velvet Negotiator.'",
-        "image_source": "/static/img/Count Velvetbeard.webp"
+        "image_source": "/static/img/Count Velvetbeard.webp",
+        "url": "velvetbeard"
     },
     {
         "name": "Prince Opalhelm",
         "description": "Prince Opalhelm, an automotive magnate, heads 'Opalhelm Motors', renowned for its luxurious, opal-inlaid vehicles. His flagship car, 'The Opal Cruiser', features an opalescent paint that changes color, reflecting his own transformative vision in the world of luxury automobiles",
-        "image_source": "/static/img/Prince Opalhelm.webp"
+        "image_source": "/static/img/Prince Opalhelm.webp",
+        "url": "opalhelm"
     }
 ]
